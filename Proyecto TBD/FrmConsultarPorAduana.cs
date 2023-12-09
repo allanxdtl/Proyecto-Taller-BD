@@ -34,8 +34,9 @@ namespace Proyecto_TBD
 
 		private void cmbAduanas_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			pedimentos.DataSource = consultas.ConsultaNormal("select idPedimento, cast(day(fecha) as varchar) + '/'+ cast(MONTH(fecha) as varchar)+'/'+ cast(year(fecha) as varchar) as 'Fecha de Expedicion' " +
+			pedimentos.DataSource = consultas.ConsultaNormal("select idPedimento, dbo.defNombreCompletoAgentes(AA.Patente) as Agente, cast(day(fecha) as varchar) + '/'+ cast(MONTH(fecha) as varchar)+'/'+ cast(year(fecha) as varchar) as 'Fecha de Expedicion' " +
 				"from PedimentosHeader PH inner join Aduanas A on A.ID=PH.Aduana" +
+				" inner join AgentesAduanales AA on AA.Patente=PH.Agente" +
 				$" where A.ID={aduanasIDyCiudad.Rows[cmbAduanas.SelectedIndex][0]}");
 		}
 	}

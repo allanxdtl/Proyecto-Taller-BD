@@ -34,8 +34,9 @@ namespace Proyecto_TBD
 
 		private void cmbImport_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			pedimentos.DataSource = consultas.ConsultaNormal("select IDPedimento, cast(day(fecha) as varchar) + '/'+ cast(MONTH(fecha) as varchar)+'/'+ cast(year(fecha) as varchar) as 'Fecha de Expedicion'" +
+			pedimentos.DataSource = consultas.ConsultaNormal("select IDPedimento, dbo.defNombreCompletoAgentes(AA.Patente) as Agente, cast(day(fecha) as varchar) + '/'+ cast(MONTH(fecha) as varchar)+'/'+ cast(year(fecha) as varchar) as 'Fecha de Expedicion'" +
 				" from PedimentosHeader PH inner join Importadores I on PH.Importador=I.IDImportador " +
+				"inner join AgentesAduanales AA on AA.Patente=PH.Agente " +
 				$"where I.IDImportador='{importadores.Rows[cmbImport.SelectedIndex][0]}'");
 		}
 

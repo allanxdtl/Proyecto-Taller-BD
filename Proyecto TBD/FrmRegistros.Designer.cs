@@ -28,6 +28,18 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.BtnLimpiarAduanas = new System.Windows.Forms.Button();
@@ -44,7 +56,6 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.registros_agentes = new System.Windows.Forms.DataGridView();
 			this.BtnAgregarAgente = new System.Windows.Forms.Button();
 			this.BtnEliminarAgente = new System.Windows.Forms.Button();
 			this.BtnEditarAgente = new System.Windows.Forms.Button();
@@ -64,7 +75,6 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.BtnLimpiarAgentes = new System.Windows.Forms.Button();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.registros_importadores = new System.Windows.Forms.DataGridView();
 			this.BtnAgregarImportador = new System.Windows.Forms.Button();
 			this.BtnEliminarImportador = new System.Windows.Forms.Button();
 			this.BtnActualizarImportador = new System.Windows.Forms.Button();
@@ -78,7 +88,6 @@
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.txtPrecioArticulo = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
-			this.registros_articulos = new System.Windows.Forms.DataGridView();
 			this.BtnAgregarArticulo = new System.Windows.Forms.Button();
 			this.BtnEliminarArticulo = new System.Windows.Forms.Button();
 			this.BtnEditarArticulo = new System.Windows.Forms.Button();
@@ -89,14 +98,17 @@
 			this.label13 = new System.Windows.Forms.Label();
 			this.BtnVerRegistrosArticulos = new System.Windows.Forms.Button();
 			this.BtnLimpiarArticulos = new System.Windows.Forms.Button();
+			this.registros_agentes = new System.Windows.Forms.DataGridView();
+			this.registros_importadores = new System.Windows.Forms.DataGridView();
+			this.registros_articulos = new System.Windows.Forms.DataGridView();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.registros_aduanas)).BeginInit();
 			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.registros_agentes)).BeginInit();
 			this.tabPage3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.registros_importadores)).BeginInit();
 			this.tabPage4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.registros_agentes)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.registros_importadores)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.registros_articulos)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -129,6 +141,7 @@
 			this.tabPage1.Controls.Add(this.label2);
 			this.tabPage1.Controls.Add(this.label1);
 			this.tabPage1.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -164,12 +177,34 @@
 			// 
 			// registros_aduanas
 			// 
+			dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(149)))), ((int)(((byte)(165)))));
+			dataGridViewCellStyle16.Font = new System.Drawing.Font("Myanmar Text", 12F);
+			dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.registros_aduanas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
 			this.registros_aduanas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.registros_aduanas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle17.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.registros_aduanas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
 			this.registros_aduanas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(149)))), ((int)(((byte)(158)))));
+			dataGridViewCellStyle18.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.registros_aduanas.DefaultCellStyle = dataGridViewCellStyle18;
+			this.registros_aduanas.EnableHeadersVisualStyles = false;
 			this.registros_aduanas.Location = new System.Drawing.Point(6, 246);
 			this.registros_aduanas.Name = "registros_aduanas";
 			this.registros_aduanas.ReadOnly = true;
+			this.registros_aduanas.RowHeadersVisible = false;
 			this.registros_aduanas.RowHeadersWidth = 51;
 			this.registros_aduanas.RowTemplate.Height = 24;
 			this.registros_aduanas.Size = new System.Drawing.Size(781, 264);
@@ -308,26 +343,13 @@
 			this.tabPage2.Controls.Add(this.label4);
 			this.tabPage2.Controls.Add(this.BtnLimpiarAgentes);
 			this.tabPage2.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
 			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(793, 516);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Agentes Aduanales";
-			// 
-			// registros_agentes
-			// 
-			this.registros_agentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-			this.registros_agentes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-			this.registros_agentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.registros_agentes.Location = new System.Drawing.Point(6, 313);
-			this.registros_agentes.Name = "registros_agentes";
-			this.registros_agentes.ReadOnly = true;
-			this.registros_agentes.RowHeadersWidth = 51;
-			this.registros_agentes.RowTemplate.Height = 24;
-			this.registros_agentes.Size = new System.Drawing.Size(772, 197);
-			this.registros_agentes.TabIndex = 32;
-			this.registros_agentes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.registros_agentes_CellClick);
 			// 
 			// BtnAgregarAgente
 			// 
@@ -531,26 +553,13 @@
 			this.tabPage3.Controls.Add(this.BtnVerRegistrosImportadores);
 			this.tabPage3.Controls.Add(this.BtnLimpiarImportadores);
 			this.tabPage3.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
 			this.tabPage3.Location = new System.Drawing.Point(4, 25);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage3.Size = new System.Drawing.Size(793, 516);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Importadores";
-			// 
-			// registros_importadores
-			// 
-			this.registros_importadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-			this.registros_importadores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-			this.registros_importadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.registros_importadores.Location = new System.Drawing.Point(13, 269);
-			this.registros_importadores.Name = "registros_importadores";
-			this.registros_importadores.ReadOnly = true;
-			this.registros_importadores.RowHeadersWidth = 51;
-			this.registros_importadores.RowTemplate.Height = 24;
-			this.registros_importadores.Size = new System.Drawing.Size(765, 235);
-			this.registros_importadores.TabIndex = 37;
-			this.registros_importadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.registros_importadores_CellClick);
 			// 
 			// BtnAgregarImportador
 			// 
@@ -669,9 +678,9 @@
 			// tabPage4
 			// 
 			this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.tabPage4.Controls.Add(this.registros_articulos);
 			this.tabPage4.Controls.Add(this.txtPrecioArticulo);
 			this.tabPage4.Controls.Add(this.label14);
-			this.tabPage4.Controls.Add(this.registros_articulos);
 			this.tabPage4.Controls.Add(this.BtnAgregarArticulo);
 			this.tabPage4.Controls.Add(this.BtnEliminarArticulo);
 			this.tabPage4.Controls.Add(this.BtnEditarArticulo);
@@ -683,6 +692,7 @@
 			this.tabPage4.Controls.Add(this.BtnVerRegistrosArticulos);
 			this.tabPage4.Controls.Add(this.BtnLimpiarArticulos);
 			this.tabPage4.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabPage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
 			this.tabPage4.Location = new System.Drawing.Point(4, 25);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -707,18 +717,6 @@
 			this.label14.Size = new System.Drawing.Size(60, 30);
 			this.label14.TabIndex = 49;
 			this.label14.Text = "Precio";
-			// 
-			// registros_articulos
-			// 
-			this.registros_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.registros_articulos.Location = new System.Drawing.Point(14, 240);
-			this.registros_articulos.Name = "registros_articulos";
-			this.registros_articulos.ReadOnly = true;
-			this.registros_articulos.RowHeadersWidth = 51;
-			this.registros_articulos.RowTemplate.Height = 24;
-			this.registros_articulos.Size = new System.Drawing.Size(765, 235);
-			this.registros_articulos.TabIndex = 48;
-			this.registros_articulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.registros_productos_CellClick);
 			// 
 			// BtnAgregarArticulo
 			// 
@@ -834,6 +832,111 @@
 			this.BtnLimpiarArticulos.UseVisualStyleBackColor = false;
 			this.BtnLimpiarArticulos.Click += new System.EventHandler(this.BtnLimpiarArticulos_Click);
 			// 
+			// registros_agentes
+			// 
+			dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(149)))), ((int)(((byte)(165)))));
+			dataGridViewCellStyle19.Font = new System.Drawing.Font("Myanmar Text", 12F);
+			dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.registros_agentes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+			this.registros_agentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.registros_agentes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle20.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.registros_agentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+			this.registros_agentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(149)))), ((int)(((byte)(158)))));
+			dataGridViewCellStyle21.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.registros_agentes.DefaultCellStyle = dataGridViewCellStyle21;
+			this.registros_agentes.EnableHeadersVisualStyles = false;
+			this.registros_agentes.Location = new System.Drawing.Point(6, 313);
+			this.registros_agentes.Name = "registros_agentes";
+			this.registros_agentes.ReadOnly = true;
+			this.registros_agentes.RowHeadersVisible = false;
+			this.registros_agentes.RowHeadersWidth = 51;
+			this.registros_agentes.RowTemplate.Height = 24;
+			this.registros_agentes.Size = new System.Drawing.Size(781, 197);
+			this.registros_agentes.TabIndex = 33;
+			// 
+			// registros_importadores
+			// 
+			dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(149)))), ((int)(((byte)(165)))));
+			dataGridViewCellStyle22.Font = new System.Drawing.Font("Myanmar Text", 12F);
+			dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.registros_importadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+			this.registros_importadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.registros_importadores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle23.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.registros_importadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+			this.registros_importadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(149)))), ((int)(((byte)(158)))));
+			dataGridViewCellStyle24.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.registros_importadores.DefaultCellStyle = dataGridViewCellStyle24;
+			this.registros_importadores.EnableHeadersVisualStyles = false;
+			this.registros_importadores.Location = new System.Drawing.Point(6, 253);
+			this.registros_importadores.Name = "registros_importadores";
+			this.registros_importadores.ReadOnly = true;
+			this.registros_importadores.RowHeadersVisible = false;
+			this.registros_importadores.RowHeadersWidth = 51;
+			this.registros_importadores.RowTemplate.Height = 24;
+			this.registros_importadores.Size = new System.Drawing.Size(781, 257);
+			this.registros_importadores.TabIndex = 38;
+			// 
+			// registros_articulos
+			// 
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(149)))), ((int)(((byte)(165)))));
+			dataGridViewCellStyle13.Font = new System.Drawing.Font("Myanmar Text", 12F);
+			dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.registros_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+			this.registros_articulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.registros_articulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.registros_articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+			this.registros_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(149)))), ((int)(((byte)(158)))));
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.registros_articulos.DefaultCellStyle = dataGridViewCellStyle15;
+			this.registros_articulos.EnableHeadersVisualStyles = false;
+			this.registros_articulos.Location = new System.Drawing.Point(6, 240);
+			this.registros_articulos.Name = "registros_articulos";
+			this.registros_articulos.ReadOnly = true;
+			this.registros_articulos.RowHeadersVisible = false;
+			this.registros_articulos.RowHeadersWidth = 51;
+			this.registros_articulos.RowTemplate.Height = 24;
+			this.registros_articulos.Size = new System.Drawing.Size(781, 270);
+			this.registros_articulos.TabIndex = 51;
+			// 
 			// FrmRegistros
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -850,12 +953,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.registros_aduanas)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.registros_agentes)).EndInit();
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.registros_importadores)).EndInit();
 			this.tabPage4.ResumeLayout(false);
 			this.tabPage4.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.registros_agentes)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.registros_importadores)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.registros_articulos)).EndInit();
 			this.ResumeLayout(false);
 
@@ -893,13 +996,11 @@
 		private System.Windows.Forms.TextBox TxtApellidoMAgente;
 		private System.Windows.Forms.TextBox TxtApellidoPAgente;
 		private System.Windows.Forms.Button txtVerRegistrosAgentes;
-		private System.Windows.Forms.DataGridView registros_agentes;
 		private System.Windows.Forms.Button BtnAgregarAgente;
 		private System.Windows.Forms.Button BtnEliminarAgente;
 		private System.Windows.Forms.Button BtnEditarAgente;
 		private System.Windows.Forms.Button BtnBuscarAgentes;
 		private System.Windows.Forms.TabPage tabPage3;
-		private System.Windows.Forms.DataGridView registros_importadores;
 		private System.Windows.Forms.Button BtnAgregarImportador;
 		private System.Windows.Forms.Button BtnEliminarImportador;
 		private System.Windows.Forms.Button BtnActualizarImportador;
@@ -911,7 +1012,6 @@
 		private System.Windows.Forms.Button BtnVerRegistrosImportadores;
 		private System.Windows.Forms.Button BtnLimpiarImportadores;
 		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.DataGridView registros_articulos;
 		private System.Windows.Forms.Button BtnAgregarArticulo;
 		private System.Windows.Forms.Button BtnEliminarArticulo;
 		private System.Windows.Forms.Button BtnEditarArticulo;
@@ -924,5 +1024,8 @@
 		private System.Windows.Forms.Button BtnLimpiarArticulos;
 		private System.Windows.Forms.TextBox txtPrecioArticulo;
 		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.DataGridView registros_agentes;
+		private System.Windows.Forms.DataGridView registros_importadores;
+		private System.Windows.Forms.DataGridView registros_articulos;
 	}
 }

@@ -36,8 +36,10 @@ namespace Proyecto_TBD
 
 		private void cmbProductos_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			pedimentos.DataSource = consultas.ConsultaNormal("select IDPedimento " +
+			pedimentos.DataSource = consultas.ConsultaNormal("select PH.IDPedimento, dbo.defNombreCompletoAgentes(AA.Patente) as 'Agente', cast(day(PH.fecha) as varchar) + '/'+ cast(MONTH(PH.fecha) as varchar)+'/'+ cast(year(PH.fecha) as varchar) as 'Fecha de Expedicion' " +
 				"from PedimentosDetail PD inner join Articulos A on PD.IDArticulo=A.IDArticulo " +
+				"inner join PedimentosHeader PH on PH.IDPedimento=PD.IDPedimento " +
+				"inner join AgentesAduanales AA on PH.Agente=AA.Patente " +
 				$"where A.IDArticulo={productos.Rows[cmbProductos.SelectedIndex]["IDArticulo"]}");
 		}
 

@@ -28,9 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.cmbProductos = new System.Windows.Forms.ComboBox();
-			this.pedimentos = new System.Windows.Forms.DataGridView();
 			this.label1 = new System.Windows.Forms.Label();
+			this.pedimentos = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.pedimentos)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,19 +47,6 @@
 			this.cmbProductos.TabIndex = 0;
 			this.cmbProductos.SelectedIndexChanged += new System.EventHandler(this.cmbProductos_SelectedIndexChanged);
 			// 
-			// pedimentos
-			// 
-			this.pedimentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-			this.pedimentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-			this.pedimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.pedimentos.Location = new System.Drawing.Point(145, 178);
-			this.pedimentos.Name = "pedimentos";
-			this.pedimentos.RowHeadersWidth = 51;
-			this.pedimentos.RowTemplate.Height = 24;
-			this.pedimentos.Size = new System.Drawing.Size(870, 245);
-			this.pedimentos.TabIndex = 1;
-			this.pedimentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-			// 
 			// label1
 			// 
 			this.label1.AutoEllipsis = true;
@@ -69,14 +59,50 @@
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Seleccionar el producto que quieres consultar en todos los pedimentos existentes";
 			// 
+			// pedimentos
+			// 
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(149)))), ((int)(((byte)(165)))));
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 12F);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			this.pedimentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.pedimentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.pedimentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.pedimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.pedimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(149)))), ((int)(((byte)(158)))));
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.pedimentos.DefaultCellStyle = dataGridViewCellStyle3;
+			this.pedimentos.EnableHeadersVisualStyles = false;
+			this.pedimentos.Location = new System.Drawing.Point(210, 205);
+			this.pedimentos.Name = "pedimentos";
+			this.pedimentos.ReadOnly = true;
+			this.pedimentos.RowHeadersVisible = false;
+			this.pedimentos.RowHeadersWidth = 51;
+			this.pedimentos.RowTemplate.Height = 24;
+			this.pedimentos.Size = new System.Drawing.Size(717, 198);
+			this.pedimentos.TabIndex = 18;
+			this.pedimentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+			// 
 			// FrmConsultarPorProducto
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(78)))), ((int)(((byte)(94)))));
 			this.ClientSize = new System.Drawing.Size(1198, 450);
-			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pedimentos);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.cmbProductos);
 			this.Name = "FrmConsultarPorProducto";
 			this.Text = "Consultar pedimento por producto";
@@ -89,7 +115,7 @@
 		#endregion
 
 		private System.Windows.Forms.ComboBox cmbProductos;
-		private System.Windows.Forms.DataGridView pedimentos;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.DataGridView pedimentos;
 	}
 }

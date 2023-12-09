@@ -80,7 +80,7 @@ namespace Proyecto_TBD
 				string con = "select * from Articulos ";
 				con += TxtIDArticulo.Text == "" ? "where IDArticulo='' " : $"where IDArticulo like '%{txtNombreArticulo.Text}%' ";
 				con += txtNombreArticulo.Text == "" ? "or Nombre='' " : $" or Nombre like '%{txtNombreArticulo.Text}%' ";
-				con += txtPrecioArticulo.Text == "" ? "or Precio='' " : $"or precio like '%{txtPrecioArticulo.Text}%'";
+				con += txtPrecioArticulo.Text == "" ? "" : $"or precio={txtPrecioArticulo.Text}";
 				registros_articulos.DataSource = consultas.ConsultaNormal(con);
 			}
 

@@ -94,7 +94,7 @@ namespace Proyecto_TBD
 
 			Workbook excel = new Workbook();
 			Worksheet hoja = excel.Worksheets[0];
-			hoja.Name = "Productos mas importados/exportados";
+			hoja.Name = "Productos TOP en pedimentos";
 			ImportTableOptions importOptions = new ImportTableOptions();
 			hoja.Cells.ImportData(consult, 0, 0, importOptions);
 

@@ -102,7 +102,7 @@ namespace Proyecto_TBD
 
 		private void BtnMakePedimento_Click(object sender, EventArgs e)
 		{
-			if (productosEnPedimento.Rows.Count > 1)
+			if (productosEnPedimento.Rows.Count >= 1)
 			{
 				try
 				{

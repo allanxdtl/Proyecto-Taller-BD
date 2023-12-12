@@ -105,6 +105,8 @@ namespace Proyecto_TBD
 			lblTotal.Text = "";
 			productosEnPedimento.DataSource = null;
 			BtnDescargarPedimento.Visible = false;
+
+
 		}
 
 		private void BtnDescargarPedimento_Click(object sender, EventArgs e)
@@ -128,22 +130,22 @@ namespace Proyecto_TBD
 				//Insercion de los datos en el documento
 				documento.SetCellValue(1, 5, "PEDIMENTO"); documento.SetCellStyle(1, 5, estilos);
 
-				documento.SetCellValue(3, 1, "No. de pedimento"); 
+				documento.SetCellValue(3, 1, "No. de pedimento");
 				documento.SetCellValue(3, 3, lblPedimento.Text);
-				documento.SetCellValue(4, 1, "Agente Aduanal:"); 
-				documento.SetCellValue(4, 3, lblAgente.Text); 
-				documento.SetCellValue(4, 7, "Patente: "); 
+				documento.SetCellValue(4, 1, "Agente Aduanal:");
+				documento.SetCellValue(4, 3, lblAgente.Text);
+				documento.SetCellValue(4, 7, "Patente: ");
 				documento.SetCellValue(4, 8, read.GetInt32(0));
-				documento.SetCellValue(5, 1, "Importador:"); 
+				documento.SetCellValue(5, 1, "Importador:");
 				documento.SetCellValue(5, 3, lblImportador.Text);
-				documento.SetCellValue(6, 1, "Aduana de arrivo:"); 
+				documento.SetCellValue(6, 1, "Aduana de arrivo:");
 				documento.SetCellValue(6, 3, lblAduana.Text);
-				documento.SetCellValue(7, 1, "Fecha de operacion:"); 
+				documento.SetCellValue(7, 1, "Fecha de operacion:");
 				documento.SetCellValue(7, 3, lblFecha.Text);
 
 
 				documento.SetCellValue(9, 4, "Lista de articulos en el pedimento");
-				documento.SetCellValue(9, 1, "Nombre"); documento.SetCellValue(9, 3, "Precio"); 
+				documento.SetCellValue(9, 1, "Nombre"); documento.SetCellValue(9, 3, "Precio");
 				documento.SetCellValue(9, 4, "Cantidad"); documento.SetCellValue(9, 5, "Subtotal");
 				int fila = 10;
 				int filaTabla = 0;
@@ -180,7 +182,7 @@ namespace Proyecto_TBD
 				//Guardado del documento
 				SaveFileDialog guardar = new SaveFileDialog();
 				guardar.DefaultExt = ".xlsx";
-				guardar.FileName = $"pedimento {lblPedimento.Text} del {lblFecha.Text}";
+				guardar.FileName = $"pedimento {lblPedimento.Text} del {GetMonthName(int.Parse(lblFecha.Text))}";
 				if (guardar.ShowDialog() == DialogResult.OK)
 				{
 					documento.SetPageSettings(sLPage);
@@ -195,5 +197,26 @@ namespace Proyecto_TBD
 				File.Delete("co.png");
 			}
 		}
+
+		private string GetMonthName(int month)
+		{
+			switch (month)
+			{
+				case 1: return "Enero";
+				case 2: return "Febrero";
+				case 3: return "Marzo";
+				case 4: return "Abril";
+				case 5: return "Mayo";
+				case 6: return "Junio";
+				case 7: return "Julio";
+				case 8: return "Agosto";
+				case 9: return "Septiembre";
+				case 10: return "Octubre";
+				case 11: return "Noviembre";
+				case 12: return "Diciembre";
+				default: return "";
+			}
+		}
+
 	}
 }

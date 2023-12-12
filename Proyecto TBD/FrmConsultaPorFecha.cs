@@ -20,6 +20,7 @@ namespace Proyecto_TBD
 
 		private void fecha_ValueChanged(object sender, EventArgs e)
 		{
+			//-----------------STORED PROCEDURE------------------------
 			pedimentos.DataSource = new ClsConsultas(ConfigurationManager.ConnectionStrings["super"].ToString())
 				.ConsultaNormal($"exec sp_BuscarPorFecha {fecha.Value.Day}, {fecha.Value.Month}, {fecha.Value.Year}");
 		}

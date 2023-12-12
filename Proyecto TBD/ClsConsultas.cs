@@ -138,6 +138,8 @@ namespace Proyecto_TBD
 				idPedimento += rnd.Next(0, 10);
 			}
 
+			//-----------------STORED PROCEDURE------------------------
+
 			cmd = new SqlCommand("Sp_RegistrarNuevoPedimentoHeader ", con);
 			con.Open();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -165,6 +167,7 @@ namespace Proyecto_TBD
 
 		private void InsertarEnPedimentoDetail(string idpedimento, string articulo, int cantidad)
 		{
+			//-----------------STORED PROCEDURE------------------------
 			cmd = new SqlCommand("Sp_RegistrarNuevoPedimentoDetail", con);
 			con.Open();
 
@@ -181,6 +184,8 @@ namespace Proyecto_TBD
 
 		public DataSet ConsultarPedimento(string pedimento)
 		{
+
+			//-----------------STORED PROCEDURE------------------------
 			cmd = new SqlCommand("SP_getPedimento", con);
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.Parameters.Add("@IDPedimento", SqlDbType.VarChar).Value = pedimento;

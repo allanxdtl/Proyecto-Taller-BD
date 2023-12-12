@@ -82,6 +82,26 @@ namespace Proyecto_TBD
 			new FrmConsultarPorImportador().Show();
 		}
 
+		private string GetMonthName(int month)
+		{
+			switch (month)
+			{
+				case 1: return "Enero";
+				case 2: return "Febrero";
+				case 3: return "Marzo";
+				case 4: return "Abril";
+				case 5: return "Mayo";
+				case 6: return "Junio";
+				case 7: return "Julio";
+				case 8: return "Agosto";
+				case 9: return "Septiembre";
+				case 10: return "Octubre";
+				case 11: return "Noviembre";
+				case 12: return "Diciembre";
+				default: return "";
+			}
+		}
+
 		private void BtnShowProductos_Click(object sender, EventArgs e)
 		{
 			DataTable consult = new ClsConsultas(ConfigurationManager.ConnectionStrings["super"].ToString()).
@@ -99,8 +119,8 @@ namespace Proyecto_TBD
 			hoja.Cells.ImportData(consult, 0, 0, importOptions);
 
 			Chart grafica = hoja.Charts[hoja.Charts.Add(ChartType.Pie, 10, 2, 34, 13)];
-			grafica.NSeries.Add($"B2:B{consult.Rows.Count+1}", true);
-			grafica.NSeries.CategoryData = $"A2:A{consult.Rows.Count+1}";
+			grafica.NSeries.Add($"B2:B{consult.Rows.Count + 1}", true);
+			grafica.NSeries.CategoryData = $"A2:A{consult.Rows.Count + 1}";
 			grafica.Title.Text = "Productos con mas importaciones/exportaciones";
 			grafica.Title.Font.Color = Color.Blue;
 			grafica.Title.Font.IsBold = true;
@@ -116,7 +136,7 @@ namespace Proyecto_TBD
 			}
 
 			SaveFileDialog guardar = new SaveFileDialog();
-			guardar.FileName = $"Productos mas importados-exportados de {DateTime.Now.Day} de {DateTime.Now.Month}.xlsx";
+			guardar.FileName = $"Productos mas importados-exportados de {DateTime.Now.Day} de {GetMonthName(DateTime.Now.Month)}.xlsx";
 			if (guardar.ShowDialog() == DialogResult.OK)
 			{
 				excel.Save(guardar.FileName);
@@ -125,7 +145,7 @@ namespace Proyecto_TBD
 				{
 					Process.Start(guardar.FileName);
 				}
-				
+
 			}
 
 
